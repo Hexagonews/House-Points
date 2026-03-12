@@ -1,0 +1,11 @@
+{
+ "players":[
+  {"name":"Elliot","faction":"Alamein","points":12},
+  {"name":"Rowan","faction":"Borneo","points":8},
+  {"name":"Leo","faction":"Alamein","points":15},
+  {"name":"Brody","faction":"Alamein","points":10},
+  {"name":"Elsie","faction":"Alamein","points":6},
+  {"name":"Archie","faction":"Alamein","points":6},
+  {"name":"Jake","faction":"Alamein","points":9}
+ ]
+}
