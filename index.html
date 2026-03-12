@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>House Points</title>
+
+<style>
+body{
+font-family:Arial;
+text-align:center;
+}
+
+table{
+margin:auto;
+border-collapse:collapse;
+}
+
+td,th{
+padding:10px;
+border:1px solid black;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>House Points Leaderboard</h1>
+
+<table id="board">
+<tr>
+<th>Rank</th>
+<th>Name</th>
+<th>Faction</th>
+<th>Points</th>
+</tr>
+</table>
+
+<script>
+
+fetch("points.json")
+.then(response=>response.json())
+.then(data=>{
+
+let players=data.players;
+
+players.sort((a,b)=>b.points-a.points);
+
+let table=document.getElementById("board");
+
+players.forEach((p,i)=>{
+
+let row=table.insertRow();
+
+row.innerHTML=
+"<td>"+(i+1)+"</td>"+
+"<td>"+p.name+"</td>"+
+"<td>"+p.faction+"</td>"+
+"<td>"+p.points+"</td>";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
